@@ -1,5 +1,7 @@
 #include<stdio.h>
+
 #include<stdlib.h>
+
 #include"vector.h"
 
 
@@ -23,8 +25,6 @@ void pushback(Vector* v, int val)
     }
     v->arr[v->size++]=val;
 }
-int get(Vector* v, int idx);
-void set(Vector* v, int idx, int val);
 int popback(Vector* v)
 {
     if (v->size == 0) {
@@ -35,7 +35,31 @@ int popback(Vector* v)
     v->size--;
     return val;
 }
+int get(Vector* v, int idx) {
+    if (idx < 0 || idx >= v->size) {
+        printf("Index out of bounds\n");
+        return -1;
+    }
+    return v->arr[idx];
+}
 
-int size(Vector* v );
-int capacity(Vector* v);
-void freeVector(Vector* v);
+void set(Vector* v, int idx, int val) {
+    if (idx < 0 || idx >= v->size) {
+        printf("Index out of bounds\n");
+        return;
+    }
+    v->arr[idx] = val;
+}
+
+int size(Vector* v) {
+    return v->size;
+}
+
+int capacity(Vector* v) {
+    return v->capacity;
+}
+
+void freeVector(Vector* v) {
+    free(v->arr);
+    free(v);
+}
