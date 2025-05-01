@@ -1,5 +1,5 @@
 #ifndef VECTOR_H
-#define VEXTOR_H
+#define VECTOR_H
 
 typedef struct
 {

@@ -1,10 +1,19 @@
-#include "include/stack.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "vector_gen.h"
 
-int main() 
-{
-    
+int main() {
+  
 }
+
+// #include "include/stack.h"
+// #include <stdio.h>
+
+// int main() 
+// {
+    
+// }
 
 
 // {
