@@ -41,6 +41,20 @@ A vector is a dynamic array that automatically resizes as elements are added. Th
 - `capacity()`: Returns the capacity of the vector.
 - `freeVector()`: Frees the memory used by the vector.
 
+ ### 4. Vector Generalised (Dynamic Array for Any Data Type)
+
+`vector_generalised` is a generic implementation of a dynamic array using `void*` pointers. This allows the storage of any data type (e.g., int, float, structs, etc.) by specifying the element size during initialization.
+
+Supported operations:
+- `createVectorgen(elem_size)`: Creates a new generalised vector.
+- `pushback(vectorgen, val)`: Adds an element to the end.
+- `popback(vectorgen, out)`: Removes and optionally returns the last element.
+- `get(vectorgen, index, out)`: Retrieves an element by index.
+- `set(vectorgen, index, val)`: Sets the value at a specific index.
+- `size(vectorgen)`: Returns the current number of elements.
+- `capacity(vectorgen)`: Returns the current capacity.
+- `freeVectorgen(vectorgen)`: Frees the memory used by the vector.
+
 ## Why This Library?
 
 This library was created with the aim of saving time on common data structure implementations and providing a foundation for future work. By making these data structures modular and reusable, it becomes easier to integrate them into different projects. 
