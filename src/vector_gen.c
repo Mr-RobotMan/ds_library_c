@@ -27,7 +27,7 @@ void pushback(Vectorgen* v, void* val)
         v->capacity*=2;
         v->arr = realloc(v->arr,v->capacity*v->elem_size);
     }
-    void* tar = (char*)v->arr+(v->size*v->elem_size);
+    void* tar = (char*)v->arr+(v->size*v->elem_size);   // since v->arr is a void pointer, type casted into char to do pointer arithmetic
     memcpy(tar, val, v->elem_size);
     v->size++;
 }

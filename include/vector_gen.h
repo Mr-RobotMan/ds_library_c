@@ -4,10 +4,10 @@
 
 typedef struct
 {
-    void* arr;
-    int size;
-    int capacity;
-    int elem_size;
+    void* arr;  // void pointer to hold address of any type, gpp(genral purpose pointer)
+    int size;   // no of elements currently stored
+    int capacity;   //total allocated slots
+    int elem_size;  //size of each elements, helping in the pointer arth 
 }Vectorgen;
 
 
